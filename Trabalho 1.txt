@@ -1,0 +1,31 @@
+TERMINAL BURRO
+
+
+
+TABUADA DE 7
+
+
+
+7 * 1 = 7
+7 * 2 = 14
+7 * 3 = 21
+7 * 10 = 70
+
+
+
+A CADA CONTAGEM, PISCAR UM LED!!!!!
+
+
+
+USAR SERIAL NUMERO 2
+
+
+
+maw@furb.br
+ASSUNTO: ELETIVA 5
+
+
+
+ATACHAR
+PROJETO VISUINO
+=================
