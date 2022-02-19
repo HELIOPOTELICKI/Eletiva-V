@@ -1,6 +1,8 @@
 from random import randint
 from time import sleep
 import pygame
+import json
+import base64 as decode
 
 pygame.init()
 pygame.font.init()
@@ -22,6 +24,12 @@ quitGame = False
 
 while not quitGame:
     #temperature = randint(16, 40)
+    response = open('Trabalho-Final\\response.JSON')
+    response = json.load(response)
+    response = response["uplink_message"]["frm_payload"]
+    response = str(decode.b64decode(response))
+    response = response[2:-1]
+    temperature = float(response)
 
     insert = pygame.image.load(elements[0])
     window.blit(insert, (0, 0))
@@ -48,10 +56,10 @@ while not quitGame:
     insert = pygame.image.load(elements[1])
     window.blit(insert, (0, mercury_display))
 
-    myfont = pygame.font.SysFont('Comic Sans MS', 40)
+    myfont = pygame.font.SysFont('Comic Sans MS', 25)
     fontColor = (0, 0, 0)
     text = myfont.render(f'{temperature}°C', False, (fontColor))
-    window.blit(text, (108, 550))
+    window.blit(text, (108, 570))
 
     pygame.display.update()
 

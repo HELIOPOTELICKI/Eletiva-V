@@ -28,7 +28,11 @@ def connect_mqtt() -> mqtt_client:
 def subscribe(client: mqtt_client):
 
     def on_message(client, userdata, msg):
-        print(f"Received `{msg.payload.decode()}` from `{msg.topic}` topic")
+        response = msg.payload.decode()
+
+        with open(f'{sc.PATH}/response.JSON', 'w') as file:
+            file.write(response)
+        print(f"Received!")
 
     client.subscribe(topic)
     client.on_message = on_message
