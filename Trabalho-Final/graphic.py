@@ -7,9 +7,9 @@ import base64 as decode
 pygame.init()
 pygame.font.init()
 
-ther = 'Trabalho-Final\images\\thermometer.png'
-merc = 'Trabalho-Final\images\mercury.png'
-icon = 'Trabalho-Final\images\icon.png'
+ther = 'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\images\\thermometer.png'
+merc = 'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\images\\mercury.png'
+icon = 'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\images\\icon.png'
 temperature = 16  # ENTRADA LORAWAN
 heightDisplay = 700
 widthDisplay = 300
@@ -24,7 +24,9 @@ quitGame = False
 
 while not quitGame:
     #temperature = randint(16, 40)
-    response = open('Trabalho-Final\\response.JSON')
+    response = open(
+        'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\\response.JSON'
+    )
     response = json.load(response)
     response = response["uplink_message"]["frm_payload"]
     response = str(decode.b64decode(response))
