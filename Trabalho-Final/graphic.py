@@ -10,7 +10,7 @@ pygame.font.init()
 ther = 'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\images\\thermometer.png'
 merc = 'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\images\\mercury.png'
 icon = 'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\images\\icon.png'
-temperature = 16  # ENTRADA LORAWAN
+
 heightDisplay = 700
 widthDisplay = 300
 elements = {0: ther, 1: merc, 2: icon}
@@ -23,7 +23,7 @@ pygame.display.set_icon(icon)
 quitGame = False
 
 while not quitGame:
-    #temperature = randint(16, 40)
+    #temperature = randint(16, 40) # Valor randomico para testes
     response = open(
         'E:\CODANDO\FURB\FURB_AULAS\\7 - Semestre\Eletiva V - Arduíno e Lorawan\Eletiva-V\Trabalho-Final\\response.JSON'
     )
